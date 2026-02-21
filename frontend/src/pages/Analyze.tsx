@@ -82,7 +82,7 @@ export default function Analyze() {
             <span className="text-2xl font-black tracking-tighter uppercase">NyaySetu</span>
           </div>
 
-          <nav className="space-y-3">
+          <nav className="space-y-4">
             {[
               { label: 'Dashboard', icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z', active: true },
               { label: 'Intelligence', icon: 'M13 10V3L4 14h7v7l9-11h-7z', active: false },
@@ -118,14 +118,18 @@ export default function Analyze() {
         
         {/* REFINED TOP BAR */}
         <header className="h-24 bg-white/60 backdrop-blur-xl border-b border-slate-100 sticky top-0 z-40 px-12 flex items-center justify-between shrink-0">
-          <div className="space-y-1">
+          <div className="space-y-3">
             <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Session Analytics</p>
             <h2 className="text-xl font-black text-slate-900 tracking-tight uppercase">Operational Command</h2>
+          </div>
+
+          <div className="space-y-1">
+            <h2 className="text-[40px] font-black text-slate-900 tracking-tight uppercase">NyaySetu</h2>
           </div>
           
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-4 px-5 py-2.5 bg-slate-50 rounded-2xl border border-slate-100">
-              <span className="text-[9px] font-black text-slate-400 uppercase tracking-[0.2em]">Private Network</span>
+              <span className="text-[13px] font-black text-slate-400 uppercase tracking-[0.2em]">Private Network</span>
               <button 
                 onClick={() => setPrivacyMode(!privacyMode)}
                 className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-all duration-300 ease-in-out focus:outline-none ${privacyMode ? 'bg-[#537ff1]' : 'bg-slate-200'}`}
@@ -159,7 +163,7 @@ export default function Analyze() {
               
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-8 text-center lg:text-left">
-                  <Badge variant="info" className="bg-white/20 text-white border-white/10 px-5 py-2 rounded-full text-[10px] font-black tracking-[0.3em]">VERSION 2.0 RELEASE</Badge>
+                  <Badge variant="info" className="bg-white/20 text-white border-white/10 px-5 py-2 text-[10px] font-white tracking-[0.3em]">VERSION 2.0 RELEASE</Badge>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight">
                     Legal Intelligence <br />
                     Redefined by AI.
@@ -167,15 +171,12 @@ export default function Analyze() {
                   <p className="text-blue-50 text-xl leading-relaxed opacity-90 max-w-xl font-medium">
                     Analyze, negotiate, and secure contracts with enterprise-grade neural networks. Zero data retention, total compliance.
                   </p>
-                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-2">
-                    <Button variant="secondary" size="lg" className="bg-white text-[#537ff1] border-none font-black px-10 rounded-2xl hover:bg-slate-50 shadow-2xl shadow-black/10 transition-all hover:-translate-y-1">
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-2 bottom-2">
+                    <Button variant="secondary" size="lg" className="bg-white text-[#537ff1] border-none font-black px-10 rounded-full hover:bg-slate-50 shadow-2xl shadow-black/10 transition-all hover:-translate-y-1">
                       ANALYZE NOW
                     </Button>
-                    <div className="flex items-center gap-3 text-xs font-black text-white/70 uppercase tracking-[0.2em]">
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      Neural Core Online
-                    </div>
                   </div>
+                  <div className="flex items-center gap-4 justify-center lg:justify-start pt-6"><br></br></div>
                 </div>
                 
                 <div className="hidden lg:flex justify-end">
@@ -233,8 +234,8 @@ export default function Analyze() {
                   
                   {/* DATA VISUALIZATION MODULES */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <Card className="border-none shadow-sm rounded-[48px] bg-white ring-1 ring-slate-100 overflow-hidden group">
-                      <CardBody className="p-12 flex flex-col justify-between h-full space-y-8 relative">
+                    <Card className="border-none shadow-sm  bg-white ring-1 ring-slate-100 overflow-hidden group ">
+                      <CardBody className="p-8 flex flex-col justify-between h-full space-y-8 relative">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-50 transition-colors duration-500"></div>
                         
                         <div className="flex justify-between items-start relative z-10">
@@ -261,7 +262,7 @@ export default function Analyze() {
                       </CardBody>
                     </Card>
 
-                    <Card className="border-none shadow-sm rounded-[48px] bg-white ring-1 ring-slate-100 overflow-hidden group">
+                    <Card className="border-none shadow-sm rounded-[48px] bg-white ring-1 ring-slate-100 overflow-hidden group min-h-[180px]">
                       <CardBody className="p-12 space-y-8 relative">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-50 transition-colors duration-500"></div>
                         
@@ -311,54 +312,14 @@ export default function Analyze() {
             {/* INTEL FEED SIDEBAR */}
             <aside className="xl:col-span-4 space-y-12">
               
-              <Card className="border-none shadow-sm rounded-[48px] bg-white ring-1 ring-slate-100 overflow-hidden">
-                <CardBody className="p-10 space-y-8">
-                  <SectionHeader title="Activity Stream" subtitle="LATEST INTEL OPERATIONS" className="mb-0" />
-                  <div className="space-y-8">
-                    {[
-                      { title: 'Residential Agreement', time: '12m ago', type: 'Analysis', status: 'COMPLETED', color: 'bg-blue-100 text-blue-600' },
-                      { title: 'SaaS Terms of Service', time: '1h ago', type: 'Export', status: 'SECURED', color: 'bg-purple-100 text-purple-600' },
-                      { title: 'Employment Contract', time: 'Yesterday', type: 'Analysis', status: 'COMPLETED', color: 'bg-emerald-100 text-emerald-600' },
-                    ].map((item, i) => (
-                      <div key={i} className="flex gap-6 group cursor-pointer transition-all hover:translate-x-1">
-                        <div className={`w-14 h-14 rounded-[20px] ${item.color} flex items-center justify-center shrink-0 font-black text-sm shadow-sm transition-all group-hover:shadow-md`}>
-                          {item.type[0]}
-                        </div>
-                        <div className="flex-1 min-w-0 flex flex-col justify-center space-y-1">
-                          <p className="text-sm font-black text-slate-900 group-hover:text-[#537ff1] transition-colors truncate uppercase tracking-tight">{item.title}</p>
-                          <div className="flex items-center gap-2">
-                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{item.time}</span>
-                            <div className="w-1 h-1 rounded-full bg-slate-200" />
-                            <span className={`text-[9px] font-black uppercase tracking-[0.15em] ${item.status === 'SECURED' ? 'text-emerald-500' : 'text-slate-400'}`}>{item.status}</span>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardBody>
-              </Card>
-
-              <Card className="border-none shadow-2xl shadow-blue-900/10 rounded-[48px] bg-gradient-to-br from-[#001b54] to-[#0a2e7a] text-white overflow-hidden relative group">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/2 group-hover:scale-125 transition-transform duration-1000"></div>
-                <CardBody className="p-10 relative z-10 space-y-6">
-                  <div className="w-16 h-16 rounded-[24px] bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20 shadow-xl ring-1 ring-white/10">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-black tracking-tight uppercase">Neural Guard</h3>
-                    <p className="text-white/50 text-sm leading-relaxed font-medium">Industry-leading AES-256 encryption. Our LLM processing is stateless—meaning your data never stays.</p>
-                  </div>
-                  <Button variant="outline" className="w-full border-white/10 text-white hover:bg-white/10 font-black py-6 rounded-[24px] tracking-[0.15em] text-[11px] uppercase">Review Security Ops</Button>
-                </CardBody>
-              </Card>
+              
+              
 
               {result && (
                 <div className="p-1 group">
                    <Button 
                     onClick={handleDownloadReport}
-                    className="w-full bg-[#537ff1] text-white shadow-2xl shadow-blue-500/30 font-black py-10 rounded-[48px] text-lg hover:bg-blue-600 transition-all hover:-translate-y-2 active:translate-y-0 group-hover:scale-[1.02]"
+                    className="p-15px w-full bg-[#537ff1] text-white shadow-2xl shadow-blue-500/30 font-black py-10 rounded-[48px] text-lg hover:bg-blue-600 transition-all hover:-translate-y-2 active:translate-y-0 group-hover:scale-[1.02]"
                   >
                     GENERATE REPORT PDF
                   </Button>
@@ -380,7 +341,7 @@ export default function Analyze() {
             </div>
             <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">NyaySetu Legal-Tech Dashboard • Enterprise Build 2.0.4 • © 2026</p>
             <div className="flex gap-8">
-              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest cursor-pointer hover:text-slate-600 transition-colors">Compliance</span>
+              <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest cursor-pointer hover:text-slate-600 transition-colors">Compliance&nbsp;</span>
               <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest cursor-pointer hover:text-slate-600 transition-colors">Privacy</span>
             </div>
           </div>

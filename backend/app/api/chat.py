@@ -1,10 +1,9 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-
 from app.services.rag_service import retrieve_similar
-from app.services.llm_service import call_openai
+from app.services.llm_service import call_openai_text
 
-router = APIRouter(prefix="/chat", tags=["Clause Chat"])
+router = APIRouter(prefix="/api/chat", tags=["Clause Chat"])
 
 
 class ClauseChatRequest(BaseModel):
@@ -18,25 +17,24 @@ async def chat_about_clause(req: ClauseChatRequest):
         context = retrieve_similar(req.clause_text)
 
         prompt = f"""
-You are a legal risk analysis AI.
-
 Clause:
 {req.clause_text}
+
+Relevant Context:
+{context}
 
 User Question:
 {req.question}
 
-Respond clearly, practically, and concisely.
+Respond clearly and practically.
 """
 
-        response = call_openai(
-            system_prompt="You are a legal risk analysis AI.",
+        answer = call_openai_text(
+            system_prompt="You are a legal contract assistant.",
             user_prompt=prompt
         )
 
-        return {
-            "answer": response.get("explanation") or response.get("answer", "")
-        }
+        return {"answer": answer}
 
     except Exception as e:
         raise HTTPException(

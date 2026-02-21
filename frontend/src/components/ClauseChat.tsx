@@ -40,7 +40,7 @@ export default function ClauseChat({ clauseText }: { clauseText: string }) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-h-[210px]">
       <div className="flex items-center gap-2 mb-2">
         <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

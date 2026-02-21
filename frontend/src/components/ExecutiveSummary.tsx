@@ -19,7 +19,7 @@ export default function ExecutiveSummary({ data, onRiskClick }: ExecutiveSummary
           subtitle="AI-GENERATED SYNTHESIS OF LEGAL STANDING"
         />
         
-        <Card className="bg-[#001b54] text-white border-none overflow-hidden relative shadow-2xl shadow-blue-900/20">
+        <Card className="bg-[#8297c4] text-white border-none overflow-hidden relative shadow-2xl shadow-blue-900/20 min-h-[150px]">
           <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
             <svg className="w-48 h-48" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L1 21h22L12 2zm0 3.45l8.27 14.3H3.73L12 5.45zM11 16h2v2h-2v-2zm0-7h2v5h-2V9z" />

@@ -65,7 +65,7 @@ export default function UploadBox({
     <div className="space-y-6">
       <div 
         onClick={() => fileInputRef.current?.click()}
-        className={`relative border-2 border-dashed rounded-xl p-12 transition-all cursor-pointer group
+        className={`relative border-2 rounded-2xl p-12 transition-all cursor-pointer group
           ${file 
             ? 'border-emerald-200 bg-emerald-50/30' 
             : 'border-slate-200 hover:border-slate-300 bg-slate-50/50 hover:bg-slate-50'}`}
@@ -109,7 +109,7 @@ export default function UploadBox({
           disabled={!file || loading}
           isLoading={loading}
           size="lg"
-          className="w-full md:w-64 shadow-lg shadow-slate-200"
+          className="w-full md:w-64 shadow-lg shadow-slate-300"
         >
           {loading ? 'Analyzing Intelligence...' : 'Analyze Contract'}
         </Button>
